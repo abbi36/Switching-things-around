@@ -19,10 +19,15 @@ function drive(direction) {
     }
 }
 async function main() {
-    const resp = await input.text('Enter a direction.');
-    drive(resp);
-    const finish = await input.text('Type "cancel" to be finished');
-    
+    while (true){
+        const resp = await input.text('Enter a direction (or cancel)');
+
+        if (resp == 'cancel') {
+            break;
+        } else {
+            drive(resp);
+        }
+    }
 }
 
 main();
