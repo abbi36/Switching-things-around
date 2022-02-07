@@ -21,6 +21,8 @@ function drive(direction) {
 async function main() {
     const resp = await input.text('Enter a direction.');
     drive(resp);
+    const finish = await input.text('Type "cancel" to be finished');
+    
 }
 
 main();
